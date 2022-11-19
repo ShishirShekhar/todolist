@@ -15,7 +15,7 @@ app.use(express.static("public"));
 dotenv.config()
 
 // connect mongoose
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qafu1.mongodb.net/todolistDB?retryWrites=true&w=majority`);
+mongoose.connect(process.env.URL);
 
 // create a item schema
 const itemsSchema = new mongoose.Schema({
